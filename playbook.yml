@@ -1,0 +1,10 @@
+---
+- hosts: localhost
+  become: true
+  gather_facts: true
+  vars:
+    SENZING_ACCEPT_EULA: "{{ lookup('env', 'SENZING_ACCEPT_EULA') }}"
+    stream_producer_version: '1.2.2'
+  roles:
+    - senzing.senzing_api
+    - senzing.stream_producer

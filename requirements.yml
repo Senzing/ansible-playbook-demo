@@ -1,0 +1,4 @@
+---
+roles:
+  - name: senzing.senzing_api
+  - name: senzing.stream_producer
