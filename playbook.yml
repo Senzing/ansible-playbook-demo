@@ -3,8 +3,10 @@
   become: true
   gather_facts: true
   vars:
-    SENZING_ACCEPT_EULA: "{{ lookup('env', 'SENZING_ACCEPT_EULA') }}"
+    senzing_accept_eula: "{{ SENZING_ACCEPT_EULA }}"
     stream_producer_version: '1.2.2'
   roles:
-    - senzing.senzing_api
-    - senzing.stream_producer
+    - { role: geerlingguy.packer-debian, when: ansible_os_family == 'Debian' }
+    - { role: geerlingguy.packer_rhel, when: ansible_os_family == 'Redhat' }
+    - name: senzing.senzing_api
+    - name: senzing.stream_producer

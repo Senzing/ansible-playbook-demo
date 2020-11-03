@@ -1,4 +1,6 @@
 ---
 roles:
+  - name: geerlingguy.packer-debian
+  - name: geerlingguy.packer_rhel
   - name: senzing.senzing_api
   - name: senzing.stream_producer
