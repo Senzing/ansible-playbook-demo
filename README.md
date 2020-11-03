@@ -8,3 +8,11 @@ This is a demo ansible playbook that showcases how ansible roles in the senzing 
 ansible-galaxy install -r requirements.yml
 ansible-playbook playbook.yml
 ```
+
+## License
+
+Apache 2
+
+## Author Information
+
+This role was created in 2020 by [Mah Chia Hui](https://github.com/mahchiahui)
